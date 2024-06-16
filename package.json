@@ -1,5 +1,5 @@
 {
-  "name": "@ludlovian/until-signal",
+  "name": "@ludlovian/subscribe-signal",
   "version": "0.1.0",
   "description": "Subscribes to a signal-based function",
   "main": "src/index.mjs",
