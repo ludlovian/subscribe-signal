@@ -1,0 +1,37 @@
+{
+  "name": "@ludlovian/until-signal",
+  "version": "0.0.0",
+  "description": "Subscribes to a signal-based function",
+  "main": "src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "scripts": {
+    "clean": "rm -rf coverage/ node_modules/.cache/",
+    "lint": "standard '{src,test}/**/*.mjs'|snazzy",
+    "format": "prettier-standard '{src,test}/**/*.mjs'",
+    "test": "c8 node --test",
+    "coverage": "npm run test && c8 report --reporter=html && sirv coverage/ -p 8000 -H"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ludlovian/until-signal.git"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/ludlovian/until-signal/issues"
+  },
+  "homepage": "https://github.com/ludlovian/until-signal#readme",
+  "devDependencies": {
+    "@preact/signals-core": "^1.6.1"
+  },
+  "peerDependencies": {
+    "@preact/signals-core": "^1.6.1"
+  },
+  "dependencies": {
+    "@ludlovian/bouncer": "github:ludlovian/bouncer",
+    "@ludlovian/clone": "github:ludlovian/clone",
+    "@ludlovian/diff-object": "github:ludlovian/diff-object"
+  }
+}
