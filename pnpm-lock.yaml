@@ -14,9 +14,9 @@ importers:
       '@ludlovian/clone':
         specifier: github:ludlovian/clone
         version: https://codeload.github.com/ludlovian/clone/tar.gz/21e43fac111069bce2efebb7cf2d42cde2b743b7
-      '@ludlovian/diff-object':
-        specifier: github:ludlovian/diff-object
-        version: https://codeload.github.com/ludlovian/diff-object/tar.gz/93f662b3f84e72c1a25e8ec7fe50a8775a233341
+      '@ludlovian/object-delta':
+        specifier: github:ludlovian/object-delta
+        version: https://codeload.github.com/ludlovian/object-delta/tar.gz/a6eb64cf3d1723ff3b661d678606c6b4366c88ae
     devDependencies:
       '@preact/signals-core':
         specifier: ^1.6.1
@@ -32,17 +32,17 @@ packages:
     resolution: {tarball: https://codeload.github.com/ludlovian/clone/tar.gz/21e43fac111069bce2efebb7cf2d42cde2b743b7}
     version: 0.1.0
 
-  '@ludlovian/diff-object@https://codeload.github.com/ludlovian/diff-object/tar.gz/93f662b3f84e72c1a25e8ec7fe50a8775a233341':
-    resolution: {tarball: https://codeload.github.com/ludlovian/diff-object/tar.gz/93f662b3f84e72c1a25e8ec7fe50a8775a233341}
-    version: 0.4.0
-
   '@ludlovian/equal@https://codeload.github.com/ludlovian/equal/tar.gz/9af158101cc2b0cee715fb85b0f61a26858f24c5':
     resolution: {tarball: https://codeload.github.com/ludlovian/equal/tar.gz/9af158101cc2b0cee715fb85b0f61a26858f24c5}
     version: 0.1.0
 
-  '@ludlovian/timer@https://codeload.github.com/ludlovian/timer/tar.gz/f5c021e191d528db5e573a07c358477c1ff5f80f':
-    resolution: {tarball: https://codeload.github.com/ludlovian/timer/tar.gz/f5c021e191d528db5e573a07c358477c1ff5f80f}
-    version: 3.0.0
+  '@ludlovian/object-delta@https://codeload.github.com/ludlovian/object-delta/tar.gz/a6eb64cf3d1723ff3b661d678606c6b4366c88ae':
+    resolution: {tarball: https://codeload.github.com/ludlovian/object-delta/tar.gz/a6eb64cf3d1723ff3b661d678606c6b4366c88ae}
+    version: 0.1.0
+
+  '@ludlovian/timer@https://codeload.github.com/ludlovian/timer/tar.gz/fa5cf51fba00f2715de2b182d1d546d7a8cbe883':
+    resolution: {tarball: https://codeload.github.com/ludlovian/timer/tar.gz/fa5cf51fba00f2715de2b182d1d546d7a8cbe883}
+    version: 3.0.2
 
   '@preact/signals-core@1.6.1':
     resolution: {integrity: sha512-KXEEmJoKDlo0Igju/cj9YvKIgyaWFDgnprShQjzimUd5VynAAdTWMshawEOjUVeKbsI0aR58V6WOQp+DNcKApw==}
@@ -51,16 +51,16 @@ snapshots:
 
   '@ludlovian/bouncer@https://codeload.github.com/ludlovian/bouncer/tar.gz/36674b0b80b72af50798aa3a7702d67e7e104ae9':
     dependencies:
-      '@ludlovian/timer': https://codeload.github.com/ludlovian/timer/tar.gz/f5c021e191d528db5e573a07c358477c1ff5f80f
+      '@ludlovian/timer': https://codeload.github.com/ludlovian/timer/tar.gz/fa5cf51fba00f2715de2b182d1d546d7a8cbe883
 
   '@ludlovian/clone@https://codeload.github.com/ludlovian/clone/tar.gz/21e43fac111069bce2efebb7cf2d42cde2b743b7': {}
 
-  '@ludlovian/diff-object@https://codeload.github.com/ludlovian/diff-object/tar.gz/93f662b3f84e72c1a25e8ec7fe50a8775a233341':
+  '@ludlovian/equal@https://codeload.github.com/ludlovian/equal/tar.gz/9af158101cc2b0cee715fb85b0f61a26858f24c5': {}
+
+  '@ludlovian/object-delta@https://codeload.github.com/ludlovian/object-delta/tar.gz/a6eb64cf3d1723ff3b661d678606c6b4366c88ae':
     dependencies:
       '@ludlovian/equal': https://codeload.github.com/ludlovian/equal/tar.gz/9af158101cc2b0cee715fb85b0f61a26858f24c5
 
-  '@ludlovian/equal@https://codeload.github.com/ludlovian/equal/tar.gz/9af158101cc2b0cee715fb85b0f61a26858f24c5': {}
-
-  '@ludlovian/timer@https://codeload.github.com/ludlovian/timer/tar.gz/f5c021e191d528db5e573a07c358477c1ff5f80f': {}
+  '@ludlovian/timer@https://codeload.github.com/ludlovian/timer/tar.gz/fa5cf51fba00f2715de2b182d1d546d7a8cbe883': {}
 
   '@preact/signals-core@1.6.1': {}

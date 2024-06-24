@@ -1,10 +1,10 @@
 import { effect } from '@preact/signals-core'
-import diffObject from '@ludlovian/diff-object'
+import createDelta from '@ludlovian/object-delta/create'
 import clone from '@ludlovian/clone'
 import Bouncer from '@ludlovian/bouncer'
 
 export default function subscribeSignal (getCurrent, callback, opts = {}) {
-  const { diff = true, bouncer: useBouncer, debounce, ...diffOpts } = opts
+  const { delta = true, bouncer: useBouncer, debounce, ...deltaOpts } = opts
   let bouncer
   let fn = send
   if (useBouncer) {
@@ -22,9 +22,9 @@ export default function subscribeSignal (getCurrent, callback, opts = {}) {
 
   function send () {
     let data = getCurrent()
-    if (diff) {
+    if (delta) {
       const _data = data
-      data = diffObject(prev, _data, diffOpts)
+      data = createDelta(prev, _data, deltaOpts)
       prev = clone(_data)
       if (!Object.keys(data).length) data = null
     }

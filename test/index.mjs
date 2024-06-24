@@ -26,6 +26,24 @@ suite('subscribe', () => {
     unsub()
   })
 
+  test('nested send', () => {
+    const s = signal({ a: { b: 2 } })
+    const calls = []
+
+    const unsub = subscribeSignal(
+      () => s.value,
+      x => calls.push(x)
+    )
+
+    assert.deepStrictEqual(calls, [{ 'a.b': 2 }])
+
+    s.value = { ...s.value, a: { b: 3 } }
+
+    assert.deepStrictEqual(calls, [{ 'a.b': 2 }, { 'a.b': 3 }])
+
+    unsub()
+  })
+
   test('debounce send', async () => {
     const s = signal({ a: 1, b: 2 })
     const calls = []
@@ -88,7 +106,7 @@ suite('subscribe', () => {
     subscribeSignal(
       () => s.value,
       x => calls.push(x),
-      { diff: false }
+      { delta: false }
     )
 
     assert.deepStrictEqual(calls, [{ a: 1, b: 2 }])

@@ -32,6 +32,6 @@
   "dependencies": {
     "@ludlovian/bouncer": "github:ludlovian/bouncer",
     "@ludlovian/clone": "github:ludlovian/clone",
-    "@ludlovian/diff-object": "github:ludlovian/diff-object"
+    "@ludlovian/object-delta": "github:ludlovian/object-delta"
   }
 }
